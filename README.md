@@ -1,87 +1,9 @@
-# Welcome to React Router!
+# LinkLeaf
 
-A modern, production-ready template for building full-stack React applications using React Router.
+LinkLeaf is a link in bio / linktree alternative, I designed it with React, React-Router, Tailwind, and Radix-UI.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+The system is based on just having URL params with JSON, that way I dont have to deal with garbage like accounts.
 
-## Features
+## Testing URL Currently
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-
-## Getting Started
-
-### Installation
-
-Install the dependencies:
-
-```bash
-npm install
-```
-
-### Development
-
-Start the development server with HMR:
-
-```bash
-npm run dev
-```
-
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
-
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+```http://localhost:5173/link?json={%22name%22:%20%22FifthWit%22,%22badges%22:%20[{%22name%22:%20%22GitHub%22,%22link%22:%20%22https://github.com/FifthWit%22,%22image%22:%20%22https://cdn-icons-png.flaticon.com/512/25/25231.png%22},{%22name%22:%20%22P-Stream%22,%22link%22:%20%22https://pstream.mov%22,%22image%22:%20%22https://pstream.mov/favicon-32x32.png?v=2%22},{%22name%22:%20%22FMHY%22,%22link%22:%20%22https://fmhy.net%22,%22image%22:%20%22https://styles.redditmedia.com/t5_s67a0/styles/communityIcon_9yusohfurqse1.png%22}]}```

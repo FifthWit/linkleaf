@@ -2,6 +2,7 @@ import type { Route } from "./+types/home";
 import { useSearchParams } from "react-router";
 import type { LinkSchema } from "../types";
 import { Badge } from "~/components/badge";
+import { BlandLink } from "~/components/blandlink";
 
 // Type guard for LinkSchema
 function isLinkSchema(obj: any): obj is LinkSchema {
@@ -57,9 +58,20 @@ export default function Link() {
               <h1 className="text-center font-semibold text-xl">{(parsed as LinkSchema).name}</h1>
               <ul className="flex flex-row px-2 py-0.5 rounded-full justify-center *:m-2 bg-background-muted">
                 {(parsed as LinkSchema).badges.map((badge: any, i: number) => (
-                    <Badge  name={badge.name} link={badge.link} image={badge.image} />
+                    <Badge key={i} name={badge.name} link={badge.link} image={badge.image} />
                 ))}
               </ul>
+              <div className="flex flex-col gap-4 mt-8">
+                {(parsed as LinkSchema).links &&
+                  (parsed as LinkSchema).links.map((link, i) => (
+                    <BlandLink
+                      key={i}
+                      url={link.url}
+                      name={link.name}
+                      image={link.image}
+                    />
+                  ))}
+              </div>
             </div>
         )
       ) : (

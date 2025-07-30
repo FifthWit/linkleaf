@@ -53,17 +53,14 @@ export default function Link() {
         error ? (
           <div className="text-red-500">{error}</div>
         ) : (
-          <>
-            {/* Example: Render badges */}
-            <div>
-              <h1 className="text-center">{(parsed as LinkSchema).name}</h1>
-              <ul className="flex flex-row justify-center *:m-2">
-                {(parsed as LinkSchema).badges.map((badge, i) => (
-                    <Badge name={badge.name} link={badge.link} image={badge.image} />
+            <div className="bg-white m-10 rounded-3xl p-8">
+              <h1 className="text-center font-semibold text-xl">{(parsed as LinkSchema).name}</h1>
+              <ul className="flex flex-row px-2 py-0.5 rounded-full justify-center *:m-2 bg-background-muted">
+                {(parsed as LinkSchema).badges.map((badge: any, i: number) => (
+                    <Badge  name={badge.name} link={badge.link} image={badge.image} />
                 ))}
               </ul>
             </div>
-          </>
         )
       ) : (
         <div>No JSON param provided.</div>
